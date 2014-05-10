@@ -1,6 +1,42 @@
 <?php
 require_once 'core/init.php';
 
+if(Session::exists('home')){
+	echo '<p>' . Session::flash('home') . '</p>';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*if(Session::exists('success')){
+	echo Session::flash('success');
+}
+
 //echo Config::get('mysql/host');
 //echo Config::get('mysql/db');
 
@@ -14,7 +50,7 @@ $user = DB::getInstance()->update('users' , '3', array(
 
 
 
-/*if(!$user->count()){
+if(!$user->count()){
 	echo 'No user';
 }else{
 	echo $user->first()->username;
