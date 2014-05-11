@@ -103,7 +103,7 @@ class DB {
 			}
 			
 			
-			$sql = "INSERT INTO users (`". implode('`,`',$keys) ."`)
+			$sql = "INSERT INTO {$table} (`". implode('`,`',$keys) ."`)
 			VALUES ({$values})";
 			//echo $sql;
 			

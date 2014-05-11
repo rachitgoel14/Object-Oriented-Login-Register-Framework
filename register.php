@@ -46,7 +46,7 @@ if(Input::exists()){
                )); 
 			   
 			   Session::flash('home' , 'You have been registered successfully and can now login');
-               header('Location: index.php');
+               Redirect::to('index.php');
 			   
             }catch(Exception $e){
                 die($e->getMessage());
@@ -54,7 +54,8 @@ if(Input::exists()){
 			//echo 'Passed';
 			//Session::flash('success' , 'You registered successfully');
 			//header('Location: index.php');
-		} else {
+		} else 
+		{
 			//print_r($validation->errors());
 			foreach($validation->errors() as $error){
 				echo $error, '<br>';
